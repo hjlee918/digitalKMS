@@ -1,0 +1,24 @@
+{:meta/version 1
+
+ :preferred-format :markdown
+ :preferred-workflow :todo
+
+ :journal/page-title-format "yyyy-MM-dd EEEE"
+ :journal/file-name-format "yyyy_MM_dd"
+
+ :default-templates {:journals ""}
+
+ :ui/show-brackets? true
+ :feature/enable-block-timestamps? true
+
+ :favorites ["000 Index" "Zettelkasten Operating Rules" "Tooling Map"]
+
+ :default-queries
+ {:journals
+  [{:title "Fleeting notes awaiting promotion"
+    :query [:find (pull ?b [*])
+            :where
+            [?b :block/properties ?p]
+            [(get ?p :type) ?t]
+            [(= ?t "fleeting")]]
+    :collapsed? false}]}}

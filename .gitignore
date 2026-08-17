@@ -1,6 +1,16 @@
 .DS_Store
+*.swp
+
 .obsidian/workspace*.json
+.obsidian/cache
 .trash/
+
 logseq/.recycle/
 logseq/bak/
+logseq/version-files/
+.logseq/
+
 .stfolder/
+.stversions/
+
+_to_delete/
